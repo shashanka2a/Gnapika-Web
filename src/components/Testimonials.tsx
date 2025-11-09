@@ -1,5 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
-import Autoplay from 'embla-carousel-autoplay@8.6.0';
+import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';
 
 interface Testimonial {
