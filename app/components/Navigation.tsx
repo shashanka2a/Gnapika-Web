@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Search, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
 
@@ -14,10 +15,16 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <a 
               href="/" 
-              className="text-[#800000] tracking-tight transition-colors hover:text-[#D4AF37]"
-              style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
+              className="flex items-center transition-opacity hover:opacity-80"
             >
-              Gnapika
+              <Image
+                src="/gnapika-logo.png"
+                alt="Gnapika Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </a>
           </div>
 
