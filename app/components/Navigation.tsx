@@ -103,36 +103,31 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu Links */}
-        <div 
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            mobileMenuOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
-          }`}
-        >
-          <div className="flex flex-col space-y-4 pb-4">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(' ', '-')}`}
-                className="relative text-[#5C4033] tracking-widest transition-colors hover:text-[#D4AF37] text-center py-2"
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-[#D4AF37]/30 pt-4">
+            <div className="flex flex-col space-y-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase().replace(' ', '-')}`}
+                  className="relative text-[#5C4033] tracking-widest transition-colors hover:text-[#D4AF37] text-center py-2"
+                  style={{ fontFamily: 'var(--font-lato), sans-serif' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link}
+                </a>
+              ))}
+              {/* Mobile CTA Button */}
+              <button 
+                className="px-6 py-2.5 bg-[#D4AF37] text-[#800000] rounded-md transition-all duration-300 hover:bg-[#E5C158] hover:shadow-lg mx-auto w-full sm:w-auto"
                 style={{ fontFamily: 'var(--font-lato), sans-serif' }}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link}
-                <span 
-                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-px bg-[#D4AF37] transition-all duration-300 group-hover:w-full"
-                />
-              </a>
-            ))}
-            {/* Mobile CTA Button */}
-            <button 
-              className="px-6 py-2.5 bg-[#D4AF37] text-[#800000] rounded-md transition-all duration-300 hover:bg-[#E5C158] hover:shadow-lg mx-auto"
-              style={{ fontFamily: 'var(--font-lato), sans-serif' }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Create Your Gift
-            </button>
+                Create Your Gift
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
