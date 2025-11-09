@@ -15,18 +15,20 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <a 
               href="/" 
-              className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              className="flex items-center gap-3 transition-opacity hover:opacity-80"
             >
-              <Image
-                src="/gnapika-logo.png"
-                alt="Gnapika Logo"
-                width={160}
-                height={50}
-                className="h-12 w-auto"
-                priority
-              />
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/gnapika-logo.png"
+                  alt="Gnapika Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
               <span 
-                className="text-[#800000] tracking-tight transition-colors hover:text-[#D4AF37]"
+                className="text-[#800000] tracking-tight transition-colors hover:text-[#D4AF37] text-lg font-medium"
                 style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
               >
                 Gnapika

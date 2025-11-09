@@ -9,15 +9,17 @@ export function Footer() {
           {/* Brand Section */}
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <Image
-                src="/gnapika-logo.png"
-                alt="Gnapika Logo"
-                width={100}
-                height={32}
-                className="h-8 w-auto"
-              />
+              <div className="relative w-8 h-8 flex-shrink-0">
+                <Image
+                  src="/gnapika-logo.png"
+                  alt="Gnapika Logo"
+                  fill
+                  className="object-contain"
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
               <h3 
-                className="text-[#f7f0e0]"
+                className="text-[#f7f0e0] text-base"
                 style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
               >
                 Gnapika
