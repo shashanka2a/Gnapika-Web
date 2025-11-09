@@ -8,14 +8,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
           <div>
-            <div className="mb-4">
+            <div className="mb-4 flex items-center gap-2">
               <Image
                 src="/gnapika-logo.png"
                 alt="Gnapika Logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
+                width={100}
+                height={32}
+                className="h-8 w-auto"
               />
+              <h3 
+                className="text-[#f7f0e0]"
+                style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
+              >
+                Gnapika
+              </h3>
             </div>
             <p 
               className="text-[#f7f0e0] leading-relaxed mb-4"

@@ -15,16 +15,22 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <a 
               href="/" 
-              className="flex items-center transition-opacity hover:opacity-80"
+              className="flex items-center gap-2 transition-opacity hover:opacity-80"
             >
               <Image
                 src="/gnapika-logo.png"
                 alt="Gnapika Logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
+                width={160}
+                height={50}
+                className="h-12 w-auto"
                 priority
               />
+              <span 
+                className="text-[#800000] tracking-tight transition-colors hover:text-[#D4AF37]"
+                style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
+              >
+                Gnapika
+              </span>
             </a>
           </div>
 
